@@ -1,121 +1,95 @@
-🧮 Distance Calculator Compiler
-This project is a simple compiler built using Flex and Bison in C++. It takes an arithmetic expression that defines two coordinate points and calculates the Euclidean distance between them.
+🌍 DISTANCE BETWEEN TWO POINTS CALCULATOR 🌍
+===========================================
 
-It generates:
+This compiler calculates the Euclidean distance between two 2D points using:
 
+📏 distance = sqrt((x2-x1)² + (y2-y1)²)
+
+✨ OUTPUTS GENERATED:
 ✅ Three Address Code (TAC)
-⚙️ Optimized Custom Instructions (like DIST_SQR, SQRT)
-🖥️ Register-based Assembly Output
+⚡ Optimized Assembly Instructions
+💻 Register-based Machine Code
 
-Built to simulate a basic register machine and demonstrate compiler design with pattern optimization.
+📥 INSTALLATION
+--------------
+🔧 1. Install MSYS2 from https://www.msys2.org/
 
-📥 Installation Guide (Windows with MSYS2)
-🔧 Step 1: Install MSYS2 Terminal
-👉 Download & install MSYS2 from the official site:
-🔗 https://www.msys2.org/wiki/MSYS2-installation/
-Follow all initialization steps!
+🔧 2. Run these commands in MSYS2 terminal:
 
-🛠️ Step 2: Open MSYS2 Terminal and Run These Commands
-bash
-Copy
-Edit
-pacman -Su                   # Update all packages  
-pacman -S base-devel gcc     # Install base tools and C++ compiler  
-pacman -S flex bison         # Install Flex & Bison  
-pacman -S git                # (Optional) Version control  
-pacman -S cmake              # (Optional) Build tools  
-🛠 Build Instructions
-Ensure flex, bison, and g++ are installed.
+   pacman -Su
+   pacman -S base-devel gcc flex bison
+   pacman -S git cmake (optional)
 
-bash
-Copy
-Edit
-make
-This will:
+🔨 BUILD INSTRUCTIONS
+------------------
+1. make
+2. Executable 'distance_calculator' will be created
 
-Generate the parser and lexer files
+🚀 USAGE EXAMPLE
+-------------
+📝 Input format:
+DISTANCE = POINT(3, 4) TO POINT(6, 8);
 
-Compile all source code
+📊 Sample Output:
 
-Create an executable called distancecalc
+💠 Three Address Code:
 
-🚀 How to Use
-Run the program:
+t1 = 6 - 3
 
-bash
-Copy
-Edit
-./distancecalc
-You will be prompted to enter a distance expression like:
+t2 = t1 * t1
 
-ini
-Copy
-Edit
-DIST = distance((X1, Y1), (X2, Y2));
-✅ Example Output
-Section	Output
-Input	DIST = distance((X1, Y1), (X2, Y2));
-Three Address Code	
-ini
-Copy
-Edit
-t1 = X2 - X1  
-t2 = t1 * t1  
-t3 = Y2 - Y1  
-t4 = t3 * t3  
-t5 = t2 + t4  
-DIST = sqrt(t5)
-| Optimized Instructions |
+t3 = 8 - 4
 
-java
-Copy
-Edit
-DIST_SQR R5 = (X2 - X1)^2 + (Y2 - Y1)^2  
-SQRT R6 = sqrt(R5)
-| Assembly Code |
+t4 = t3 * t3
 
-vbnet
-Copy
-Edit
-MOV R1, X1  
-MOV R2, X2  
-SUB R3, R2, R1  
-MUL R4, R3, R3  
-MOV R5, Y1  
-MOV R6, Y2  
-SUB R7, R6, R5  
-MUL R8, R7, R7  
-ADD R9, R4, R8  
-SQRT R10, R9  
-STORE DIST, R10
-Assembly is also saved to output.asm.
+t5 = t2 + t4
 
-📁 Project Structure
-bash
-Copy
-Edit
-.
-├── lexer.l         # Lexer (Flex)  
-├── parser.y        # Parser + Code Gen (Bison)  
-├── main.cpp        # Entry point  
-├── Makefile        # Build script  
-├── output.asm      # Assembly output  
-└── README.md       # You're here!
-⚙️ Optimization Details
-Pattern	Recognized As
-(X2 - X1)^2 + (Y2 - Y1)^2	DIST_SQR
-sqrt(...)	SQRT
-These patterns are recognized during parsing and mapped to custom pseudo-instructions.
+t6 = sqrt(t5)
 
-📸 Screenshots
-Add screenshots of terminal usage and output here
+DISTANCE = t6
 
-![WhatsApp Image 2025-04-06 at 16 47 50](https://github.com/user-attachments/assets/c884b9a3-c5a0-40fd-8c05-fcb233075a56)
+⚡ Optimized Assembly:
 
-![WhatsApp Image 2025-04-06 at 16 47 51](https://github.com/user-attachments/assets/b90bfba6-09d8-4e2b-9884-7288b8911eca)
+MOV R1, 6
 
-![WhatsApp Image 2025-04-06 at 16 47 51 (1)](https://github.com/user-attachments/assets/86b92c4f-0b6a-4403-90a3-4eb266dab222)
+SUB R1, R1, 3
 
-📜 License
-MIT License – feel free to use, modify, and enhance.
+MUL R1, R1, R1
 
+MOV R2, 8
+
+SUB R2, R2, 4
+
+MUL R2, R2, R2
+
+ADD R3, R1, R2
+
+SQRT R4, R3
+
+STORE DISTANCE, R4
+
+🎯 OPTIMIZATIONS
+-------------
+
+🔍 Patterns optimized:
+
+- (a-b)*(a-b) → SUB_SQUARE
+
+- a²+b² → ADD_SQUARES
+  
+
+📂 FILES
+-----
+
+📄 lexer.l    - Flex lexer definitions
+
+📄 parser.y   - Bison parser rules
+
+📄 main.cpp   - Main program
+
+📄 Makefile   - Build configuration
+
+
+📜 LICENSE
+-------
+MIT License - Free to use and modify
