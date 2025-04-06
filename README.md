@@ -90,6 +90,31 @@ STORE DISTANCE, R4
 📄 Makefile   - Build configuration
 
 
+📸OUTPUT SCREENSHOTS
+-----------------
+
+![WhatsApp Image 2025-04-06 at 16 47 50](https://github.com/user-attachments/assets/86cf2828-3924-4dc9-9fc4-1caf268dd693)
+
+![WhatsApp Image 2025-04-06 at 16 47 51](https://github.com/user-attachments/assets/bdae94bb-df69-45b5-bf10-7a2b60e01c4e)
+
+![WhatsApp Image 2025-04-06 at 16 47 51 (1)](https://github.com/user-attachments/assets/4efbfbb6-ae9f-4715-bfc2-98fd73827331)
+
+
+✍🏻AUTHOR
+--------
+
+J.Solmon Joseph
+
+🎓 B.Tech CSE, NIT Raipur
+
+🌐 GitHub: jojo16-cyber
+
+🔗 LinkedIn: Joseph Solmon
+
+
+
+
+
 📜 LICENSE
 -------
 MIT License - Free to use and modify
