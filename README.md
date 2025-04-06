@@ -1,4 +1,5 @@
 🧮 Distance Calculator Compiler
+
 This project is a simple compiler built using Flex and Bison in C++. It takes an arithmetic expression that defines two coordinate points and calculates the Euclidean distance between them.
 
 It generates:
@@ -9,7 +10,9 @@ It generates:
 
 Built to simulate a basic register machine and demonstrate compiler design with pattern optimization.
 
+
 📥 Installation Guide (Windows with MSYS2)
+
 🔧 Step 1: Install MSYS2 Terminal
 👉 Download & install MSYS2 from the official site:
 🔗 https://www.msys2.org/wiki/MSYS2-installation/
@@ -38,6 +41,7 @@ Generate the parser and lexer files
 Compile all source code
 
 Create an executable called distancecalc
+
 
 🚀 How to Use
 Run the program:
@@ -90,7 +94,9 @@ SQRT R10, R9
 STORE DIST, R10
 Assembly is also saved to output.asm.
 
+
 📁 Project Structure
+
 bash
 Copy
 Edit
@@ -107,12 +113,14 @@ Pattern	Recognized As
 sqrt(...)	SQRT
 These patterns are recognized during parsing and mapped to custom pseudo-instructions.
 
+
 📸 Screenshots
 Add screenshots of terminal usage and output here
 ##Output
+
+![WhatsApp Image 2025-04-06 at 16 47 50](https://github.com/user-attachments/assets/8b5761ef-f29b-44d1-b7ac-a868dbd5f343)
 ![WhatsApp Image 2025-04-06 at 16 47 51](https://github.com/user-attachments/assets/43c7f809-a8e9-4583-8aee-40247763d099)
 ![WhatsApp Image 2025-04-06 at 16 47 51 (1)](https://github.com/user-attachments/assets/39a5e7d4-ec6a-4b77-92a7-ccfd3ea07865)
-![WhatsApp Image 2025-04-06 at 16 47 50](https://github.com/user-attachments/assets/8b5761ef-f29b-44d1-b7ac-a868dbd5f343)
 
 
 
